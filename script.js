@@ -12,4 +12,52 @@ window.addEventListener("load", onLoad);
 
 function onLoad() {
   console.log("hi");
+ //dessde el selected vamos añadiendo las clases 1 a 1 con pero
+  //lo suyo sería acceder con parend node hasta el list y de hay recorrer la lista de hijos y añadir a todos una clase recorriendolos
+
+  let childSelected=document.querySelector(".selected")
+  let ChildParent1=childSelected.parentNode;
+  //Ya tengo al padre
+  let parent=ChildParent1.parentNode;
+  
+  //hijo 1
+  console.log("hijo1")
+  var childList1 = parent.childNodes[0].nextSibling;
+  console.log(childList1);
+  var childSpan1=childList1.childNodes[0]; 
+  console.log(childSpan1)
+  childSpan1.classList.add('element-1');
+  console.log(childSpan1.classList)
+   //hijo 2
+  console.log("hijo2")
+  var childList2 = parent.childNodes[2].nextSibling;
+  console.log(childList2)
+  var childSpan2=childList2.childNodes[0]; 
+  console.log(childSpan2)
+  childSpan2.classList.add('element-2');
+  console.log(childSpan2.classList)
+   //hijo 3
+  console.log("hijo3")
+  var childList3 = parent.childNodes[4].nextSibling;
+  console.log(childList3)
+  var childSpan3=childList3.childNodes[0]; 
+  console.log(childSpan3)
+  childSpan3.classList.add('element-3');
+  console.log(childSpan3.classList)
+  //hijo 4
+  console.log("hijo4")
+  var childList4 = parent.childNodes[6].nextSibling;
+  console.log(childList4)
+  var childSpan4=childList4.childNodes[0]; 
+  console.log(childSpan4)
+  childSpan4.classList.add('element-4');
+  console.log(childSpan4.classList)
+//hijo 5
+  console.log("hijo5")
+  var childList5 = parent.childNodes[8].nextSibling;
+  console.log(childList5)
+  var childSpan5=childList5.childNodes[0]; 
+  console.log(childSpan5)
+  childSpan5.classList.add('element-5');
+  console.log(childSpan5.classList)
 }

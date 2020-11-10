@@ -63,14 +63,14 @@ function onLoad() {
 
   //    * Tras añadir las clases, haced uso de "querySelectorAll" para obtener solo los elementos "li" con valor par (teniendo en cuenta que el primer elmento es el 1) y, a continuación, eliminadlos.
 
-  //LISTA
-  console.log("lista LI")
+  //LISTA 1:ELIMINAR ELEMENTOS PARES
+  console.log("lista 1")
   let list=document.querySelectorAll("li:nth-child(even)")
 
   count=0;
   for (item of list){
     if(count >= 0){
-          console.log("Se removerá el div:", item);
+          console.log("Se removerá el li:", item);
           item.remove();
     }  
   }
@@ -78,4 +78,47 @@ function onLoad() {
   //En la segunda lista, que en principio está vacía, deberéis hacer esto:
 //    * Tenéis que generar dentro de esta lista, nodo a nodo, la misma estructura que ha quedado en la primera lista en la que realizastéis los cambios. Tiene que quedar igual, con la misma jerarquía y con las mismas clases, pero con la diferencia de que en vez de elementos "span" deben ser botones. Para replicar los elementos de la primera lista no hace falta que la recorráis, podéis simplemente generar cada elemento "a mano" una detrás de otro (aunque si usáis la lista de referencia para hacer algún tipo de bucle, mejor)
 
+  //Ya tengo al padre
+   console.log("LISTA 2");
+  let list2=document.querySelector("#list2");
+  console.log(list2);
+  let lChild1=document.createElement('li')
+  let lChild3=document.createElement('li')
+  let lChild5=document.createElement('li')
+ 
+  list2.appendChild(lChild1);
+  list2.appendChild(lChild3);
+  list2.appendChild(lChild5);
+  let text1=document.createTextNode("texto ejemplo 1");
+  let text3=document.createTextNode("texto ejemplo 3");
+  let text5=document.createTextNode("texto ejemplo 5");
+  lChild1.appendChild(text1);
+  lChild3.appendChild(text3);
+  lChild5.appendChild(text5);
+
+  //botones
+  //boton 1
+  let button1=document.createElement('button')
+  let intro=document.createElement('br')
+  let textB1=document.createTextNode("boton 1")
+  lChild1.appendChild(intro);
+  lChild1.appendChild(button1);
+  button1.appendChild(textB1);
+  button1.classList.add('element-1');
+ //boton 3
+  let button3=document.createElement('button')
+  let intro3=document.createElement('br')
+  let textB3=document.createTextNode("boton 3")
+  lChild3.appendChild(intro3);
+  lChild3.appendChild(button3);
+  button3.appendChild(textB3);
+  button3.classList.add('element-3');
+  //boton 5
+  let button5=document.createElement('button')
+  let intro5=document.createElement('br')
+  let textB5=document.createTextNode("boton 5")
+  lChild5.appendChild(intro5);
+  lChild5.appendChild(button5);
+  button5.appendChild(textB5);
+  button5.classList.add('element-5');
 }

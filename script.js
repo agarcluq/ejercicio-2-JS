@@ -121,4 +121,7 @@ function onLoad() {
   lChild5.appendChild(button5);
   button5.appendChild(textB5);
   button5.classList.add('element-5');
+
+  //Después de generar esta segunda lista, añadid el atributo disabled al último //botón.
+  button5.setAttribute("disabled", "");
 }

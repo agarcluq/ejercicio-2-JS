@@ -19,7 +19,7 @@ function onLoad() {
   let ChildParent1=childSelected.parentNode;
   //Ya tengo al padre
   let parent=ChildParent1.parentNode;
-  
+
   //hijo 1
   console.log("hijo1")
   var childList1 = parent.childNodes[0].nextSibling;
@@ -60,4 +60,22 @@ function onLoad() {
   console.log(childSpan5)
   childSpan5.classList.add('element-5');
   console.log(childSpan5.classList)
+
+  //    * Tras añadir las clases, haced uso de "querySelectorAll" para obtener solo los elementos "li" con valor par (teniendo en cuenta que el primer elmento es el 1) y, a continuación, eliminadlos.
+
+  //LISTA
+  console.log("lista LI")
+  let list=document.querySelectorAll("li:nth-child(even)")
+
+  count=0;
+  for (item of list){
+    if(count >= 0){
+          console.log("Se removerá el div:", item);
+          item.remove();
+    }  
+  }
+
+  //En la segunda lista, que en principio está vacía, deberéis hacer esto:
+//    * Tenéis que generar dentro de esta lista, nodo a nodo, la misma estructura que ha quedado en la primera lista en la que realizastéis los cambios. Tiene que quedar igual, con la misma jerarquía y con las mismas clases, pero con la diferencia de que en vez de elementos "span" deben ser botones. Para replicar los elementos de la primera lista no hace falta que la recorráis, podéis simplemente generar cada elemento "a mano" una detrás de otro (aunque si usáis la lista de referencia para hacer algún tipo de bucle, mejor)
+
 }
